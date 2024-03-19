@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    font-size: 17px;
+}
+
+
+/* giỏ hàng */
+.main-cart .main-cart {
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.main-cart .title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main-cart .product {
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    height: 100%;
+}
+
+.main-cart .product_main {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+}
+
+.main-cart .product_main p {
+    padding: 0 1px;
+}
+
+.main-cart .product_main h3 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 0;
+}
+
+.main-cart .suli_product_main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+    height: 100%;
+}
+
+.main-cart .suli_product_main p {
+    margin: 0;
+}
+
+/* Thêm CSS này */
+.main-cart .group_button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.main-cart .soluong {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px 10px;
+}
+
+.main-cart .soluong1 {
+    width: 40px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #000;
+    margin: 0 5px;
+}
+
+.main-cart .price {
+    font-size: 18px;
+}
+
+.main-cart .original-price {
+    text-decoration: line-through;
+    margin-left: 10px;
+    color: #999;
+}
+
+.main-cart .khuyenmai {
+    background-color: white;
+    padding: 10px 20px;
+}
+
+.main-cart .title_product p {
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.main-cart .title_product_list {
+    border: 1px solid rgb(170, 167, 167);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    min-height: 150px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.main-cart .title_product_list p {
+    margin-bottom: 10px;
+}
+
+.main-cart .title_product_list i {
+    color: #4070f4;
+}
+
+.main-cart .title_product_list h3 {
+    margin-bottom: 5px;
+}
+
+.main-cart .title_product_list h3 span {
+    color: rgb(75, 75, 226);
+    padding: 10px;
+
+}
+
+.main-cart .tilte_pay .main-cart .pay {
+    border: 1px solid rgb(170, 167, 167);
+
+    background-color: #4070f4;
+    padding: 10px 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.main-cart .deltail_pay {
+    border: 1px solid rgb(170, 167, 167);
+    padding: 10px 20px;
+}
+
+.main-cart .deltail_pay h3 {
+    margin-bottom: 20px;
+}
+
+.main-cart .deltail_pay p i {
+    color: #4070f4;
+    padding: 20px;
+}
+
+.main-cart .form_main {
+    margin-top: 20px;
+    background-color: white;
+    padding: 10px 30px;
+}
+
+.main-cart .main-cart .main-cart .form_main h3,
+.main-cart .main-cart input,
+.main-cart .main-cart select {
+    margin-bottom: 20px !important;
+}
+.main-cart .main-cart input {
+    border: 1px solid rgb(197, 195, 195) !important;
+}
+.main-cart .main-cart .main-cart .form_main textarea {
+    border: 1px solid rgb(197, 195, 195) !important;
+}
+.main-cart .main-cart .main-cart .form_main select {
+    border: 1px solid rgb(197, 195, 195) !important;
+}
+
+.main-cart .form_main select {
+    padding: 5px 10px;
+}
+
+.main-cart .form_main textarea {
+    width: 100%;
+    /* Đặt width là 50% của phần tử cha */
+    padding: 20px 0;
+    font-size: 15px;
+}
+
+#hoten,
+#dienthoai,
+#email, #diachi {
+    border-radius: 5px;
+    border: 0.2px solid rgb(199, 197, 197);
+    padding: 15px;
+    margin: 10px 10px 10px 0;
+}
+
+
+.main-cart .thanhtoan {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    background-color: white;
+}
+
+
+
+.main-cart .giatien p,
+.main-cart .xacnhangia p {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.main-cart .giatien p span,
+.main-cart .xacnhangia p span {
+    margin-left: 10px;
+    padding: 0px 50px;
+}
+
+.main-cart .xacnhangia p {
+    margin-bottom: 20px;
+}
+
+.main-cart .xacnhangia button {
+    border: none;
+    color: #fff;
+    padding: 10px 100px;
+    background-color: #4070f4;
+    border-radius: 20px;
+}
+
+.group_button {
+    display: flex;
+    align-items: center;
+}
+
+.Tdsoluong {
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #4070f4;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    margin: 0 5px;
+}
+
+#soLuong {
+    width: 50px;
+    padding: 8px;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.form_main {
+    margin-bottom: 20px;
+}
+
+.form_main h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.form_main input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form_main input[type="text"]:focus {
+    outline: none;
+    border-color: #ff4646;
+}

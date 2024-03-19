@@ -1,0 +1,387 @@
+
+/* Media query cho kích thước màn hình nhỏ hơn hoặc bằng 768px */
+@media screen and (max-width: 1370px) { 
+    .section-gifts .section-right .list-products {
+        grid-template-columns: repeat(3, 1fr);
+        margin: 20px;
+    
+    }
+    .section-gifts .section-right {
+        width: 70%;
+    }
+    .section-gifts .section-right .list-products .product {
+        width: unset;
+        margin: 10px;
+    }
+    .child-category {
+        left: 11%;
+    }
+    .section-banner {
+        width: 1100px;
+    }
+    .banner-category {
+        justify-content: center;
+    }
+    .banner-left {
+        width: 68%;
+    }
+}
+
+
+@media screen and (max-width: 1300px) {
+    
+    main {
+        width: 90%;
+    }
+    .logo {
+        width: 100px;
+    }
+    .search {
+        width: 200px;
+        margin-right: 0;
+    }
+    .category {
+        white-space: nowrap;
+    }
+    .category:hover .child-category {
+        display: none !important;
+    }
+    .category:hover{
+        display: unset !important;
+    }
+    .section-category {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .section-category button {
+        display: block;
+    }
+    .section-category > #categories {
+       
+        margin-top: 10px;
+        overflow: hidden;
+        width: 480px;
+
+    }
+    .section-category > #categories > #categoryList {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .banner-category {
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .banner-main-left {
+        width: 100%;
+        text-align: center;
+        height: 100%;
+    }
+    .banner-main-left img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .banner-right {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-items: center;
+    }
+    .section-category {
+        width: 100%;
+        
+    }
+    .section-banner {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .banner-left,
+    .banner-right {
+        width: 100%;
+    }
+
+    .sub-banner-left {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+    }
+    .sub-banner-left div {
+        width: 100%;
+        height: 100%;
+    }
+    .banner-right div {
+        width: 100%;
+        height: 100%;
+    }
+    
+
+    
+}
+@media screen and (max-width: 1150px) {
+    .section-gifts {
+        flex-direction: column;
+    }
+    .section-gifts .section-left{
+        width: 100%;
+    }
+    .section-gifts .section-right {
+        width: 100%;
+    }
+    
+    .section-gifts .section-right .list-products {
+        grid-template-columns: repeat(3, 1fr);
+        margin: 20px;
+    }
+    .section-gifts .section-right .list-products .product {
+        width: 90%;
+        margin-right: 10px;
+    }
+    .home-products .list-home-prds {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .news-page .list-news, .gift-news-page .list-gift-news {
+        grid-template-columns: repeat(3,1fr);
+    }
+    .news-page .list-news .img, .gift-news-page .list-gift-news .img {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    /* reponsive trang chu */
+    header {
+        height: 70px;
+    }
+
+    .logo {
+        width: 70px;
+    }
+
+    .search {
+        width: 230px;
+    }
+    
+    .nav-header {
+        display: none;
+    }
+    .cart-phone {
+        position: absolute;
+        right: 180px;
+        display: block;
+    }
+
+    main {
+        width: 100%;
+    }
+    .main-productdetails {
+        width: 100% !important;
+    }
+
+    /* reponsive chi tiet san pham*/
+    .main-productdetails .row .rol1 .product img {
+        padding: 0;
+        margin: 0;
+    }
+    .main-productdetails .rol1 {
+        width: 100% !important;
+    }
+    .main-productdetails .row .rol2 {
+        width: 100% !important;
+        margin: 0;
+    }
+    .main-productdetails .row .rol1, .row .rol2 {
+        max-width: 100%;
+        
+    }
+    
+    .main-productdetails .row, .row2 {
+        flex-direction: column;
+    }
+    .main-productdetails .row .banner_product  {
+        margin: 10px;
+    }
+    .main-productdetails .row .banner_product img {
+        width: 90%;
+        height: 100%;
+    }
+    .main-productdetails .row2 .mota {
+        height: 100%;
+        width: 100% !important;
+    }
+    .main-productdetails .row2 .tintuc {
+        width: 100% !important;
+        margin: 7px 0 0 0;
+    }
+    /* reponsive trang tin tuc */
+    .main-tintuc{
+        flex-direction: column;
+    }
+    .main-tintuc .row,  .main-tintuc .row2 {
+        width: 100%;
+    }
+    .main-tintuc .box_sukien {
+        margin-top: 7px;
+    }
+    .main-tintuc .row2 {
+        padding: 0;
+    } 
+    .main-productdetails .row .rol1 .product img {
+        width: 50%;
+    }
+    .main-productdetails .rol1 p img {
+        width: 50px;
+    }
+
+    
+
+}
+@media screen and (max-width: 850px) {
+     /* reponsive trang chu */
+     main {
+        width: 100%;
+     }
+    .nav-main {
+        background-color: #353333;
+    }
+    .nav-main .menu-phone {
+        display: block;
+    }
+    .nav-main > .nav-m-list {
+        display: none;
+        padding: 30px 30px 30px 10px;
+        top: 0;
+        margin: 0;
+        color: black;
+        position: fixed;
+        height: 100%;
+        flex-direction: column;
+        background-color: #fff;
+        z-index: 999;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        
+    }
+    .nav-main a {
+        color: black;
+    }
+    .nav-main .close-menu {
+        display: block;
+    }
+    .banner-main-left {
+        display: none;
+    }
+    .sub-banner-left {
+        grid-template-columns: repeat(1, 1fr);
+        place-items: center;
+    }
+    .banner-right {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        place-items: center;
+    }
+
+    .home-products  {
+        padding: 10px;
+    }
+    /* reponsive gio hang */
+    .main-cart  {
+        width: 100%;
+    }
+    .main-cart .thanhtoan {
+        flex-direction: column;
+    }
+    
+}
+
+
+/* Media query cho kích thước màn hình nhỏ hơn hoặc bằng 480px */
+
+@media screen and (max-width: 650px) {
+    /* reponsive trang chu */
+    .section-gifts .section-right .list-products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .home-products .list-home-prds {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .dif-category .fat-ctgr {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .news-page .list-news, .gift-news-page .list-gift-news {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .news-page .list-news .img, .gift-news-page .list-gift-news .img {
+        margin-top: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+    .cart-phone {
+        position: absolute;
+        right: 150px;
+    }
+    .search {
+        margin: 20px;
+        width: 130px;
+    }
+    .form-login {
+        width: 120px;
+    }
+    .logo{
+        width: 30px;
+        font-size: 30px;
+    }
+    .home-products .list-home-prds .product .name-pr, .section-right .list-products .product .name-pr{
+        font-size: 15px;
+    }
+   
+    .home-products .list-home-prds .gift-price, .section-right .list-products .product .gift-price {
+        font-size: 15px;
+    }
+    /* reponsive trang chi tiet san pham */
+    .main-productdetails {
+        width: 100%;
+        padding: 0;
+    }
+
+    /* reponsive gio hang */
+    .main-cart .product_main {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    /* reponsive trang tin tuc */
+    .main-tintuc .list_content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .main-tintuc .list_content .rol {
+        width: 100%;
+    }
+    .main-tintuc .list_content .rol p {
+        font-size: 14px;
+
+    }
+    .main-tintuc .box_content p {
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    .main-tintuc .listbox_content img  {
+        width: 50%;
+    }
+    .main-tintuc .listbox_content {
+        margin-right: 10px;
+    }
+    /* reponsive trang gioi thieu */
+    .main-gioithieu .imggt1 {
+        margin: 0;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .main-gioithieu .anhnho {
+        width: 100%;
+        height: 100%;
+    }
+}

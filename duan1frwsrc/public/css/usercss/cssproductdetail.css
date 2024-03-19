@@ -1,0 +1,337 @@
+.container-form-add-typePr {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 400px;
+    width: 100%;
+    display: none;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0px 10px 0px gray;
+    border-radius: 1rem;
+}
+.inline-block{
+    display: inline-block;
+}
+
+.navbar {
+    padding: 20px;
+    background-color: #fff;
+    max-width: 100%;
+
+}
+
+.navbar a {
+    padding: 10px;
+    line-height: 30px;
+    font-size: 15px;
+    color: black;
+}
+
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* sản phẩm chi tiết */
+.main-productdetails {
+    width: 90%;
+    margin: 0 auto;
+    /* Đặt margin auto để căn giữa theo chiều ngang */
+    background-color: #f0f0f0;
+    margin-top: 20px;
+}
+
+.main-productdetails .row {
+
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+
+}
+
+.main-productdetails .rol1  {
+    width: 40%;
+}
+.main-productdetails .rol1 p img {
+    border: 2px solid #fff;
+}
+
+.main-productdetails .rol1 p img:hover {
+    border: 2px solid red;
+    cursor: pointer;
+}
+
+
+.main-productdetails .rol1 .product {
+    display: flex;
+    flex-direction: column;
+    
+}
+.main-productdetails .rol1 .product img {
+    width: 100%;
+}
+
+.main-productdetails .banner_product {
+    width: 100%;
+    margin: 10px;
+}
+
+
+.main-productdetails .row .rol2 {
+    width: 60%;
+    padding: 10px;
+}
+
+
+.main-productdetails .rol2 {
+    margin-left: 5%;
+}
+
+.main-productdetails .rol2 h3 {
+    margin-top: 30px;
+}
+
+.main-productdetails .rol2  > p {
+    padding: 10px;
+    background-color: rgb(243, 104, 62);
+}
+
+.main-productdetails .rol2 p {
+    font-weight: 700;
+    font-size: 20px;
+    color: rgb(255, 25, 25);
+    padding: 10px;
+}
+
+.product_name {
+    padding: 20px 20px 20px 0;
+}
+
+.main-productdetails .group-button {
+    margin-top: 30px;
+}
+
+.main-productdetails .soluong {
+    background-color: #f0f0f0;
+    height: 25px;
+    width: 25px;
+    border: #fff;
+    border-radius: 5px;
+}
+
+.main-productdetails .soluong1 {
+    width: 50px;
+    padding: 10px;
+    border: 0.5px solid gray;
+}
+
+.main-productdetails #soluong {
+    text-align: center;
+    border: 1px solid rgb(231, 229, 229);
+}
+
+.main-productdetails .buy_here {
+    margin-top: 50px;
+
+}
+
+.main-productdetails .buy_here button {
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4070f4;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 18px;
+}
+
+.main-productdetails .buy_here a:hover {
+    background-color: #1e57f1;
+
+}
+
+.main-productdetails .content h3 {
+    color: #1ABEE2;
+    font-size: 20px;
+    margin: 20px 0 10px;
+}
+
+.main-productdetails .khuyenmai {
+    background-color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 10px;
+    border: 1px solid #e5e2e2;
+}
+
+.main-productdetails .khuyenmai h3 {
+    font-size: 24px;
+    margin: 10px 0;
+
+}
+
+.main-productdetails .box_content {
+    border: 1px solid #e5e2e2;
+    min-height: 150px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.main-productdetails .box_content p {
+    color: black;
+    font-size: 16px;
+}
+
+.main-productdetails .box_content i {
+    color: #24B400;
+    padding: 0 5px;
+}
+
+.main-productdetails .row2 {
+    display: flex;
+    margin-top: 7px;
+}
+
+.main-productdetails .row2 .mota {
+    width: 60%;
+    padding: 20px;
+    background-color: #fff;
+    min-height: 350px;
+}
+
+
+.main-productdetails .mota h3 {
+    margin-bottom: 20px;
+}
+
+.main-productdetails .row2 .tintuc {
+    width: 40%;
+    margin-left: 0.5%;
+    padding: 10px;
+    color: #333;
+   
+    background-color: #fff;
+
+}
+
+.main-productdetails .tintuc .title {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.main-productdetails .tintuc .list_tintuc {
+    display: flex;
+    padding-bottom: 20px;
+}
+
+.main-productdetails .tintuc .list_tintuc img {
+    width: 50px;
+    height: 50px;
+}
+
+.main-productdetails .binhluan {
+    margin-top: 7px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.main-productdetails .binhluan h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.main-productdetails .binhluan input[type="text"] {
+    width: 80%;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.main-productdetails .binhluan button {
+    background-color: #4070f4;
+    color: #fff !important;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.main-productdetails .list_binhluan {
+    margin-top: 20px;
+}
+
+.main-productdetails .list_binhluan h3 {
+    margin-bottom: 5px;
+}
+
+.main-productdetails .list_binhluan p i {
+    color: yellow;
+
+}
+
+.breadcrumb {
+    display: flex;
+    list-style: none;
+    padding: 15px;
+    flex-wrap: wrap;
+}
+.breadcrumb-item a {
+    color: none;
+}
+
+.main-productdetails .list_binhluan p:last-child {
+    margin-bottom: 0;
+}
+
+
+
+.breadcrumb-item:not(:last-child)::after {
+    content: '/';
+    margin: 0 5px; 
+    color: #6c757d; 
+}
+
+
+.breadcrumb-item.active::after {
+    content: none; 
+}
+
+.breadcrumb-item.active {
+    color: #007bff; 
+}
+
+.breadcrumb-item a:hover {
+    text-decoration: underline;
+}
+.chose-type {
+    font-size: 12px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    
+}
+.typied {
+    cursor: pointer;
+    display: flex; /* Sử dụng flex container */
+    align-items: stretch;
+    flex: 1;
+    border-radius: 10px;
+    margin-left: 2px;
+    margin-top: 2px;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+.selected {
+    border: 1px solid rgb(18, 152, 18);
+}

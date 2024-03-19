@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+           background-color: #f0f0f0;
+            font-size: 17px;
+        }
+
+        .navbar {
+            background-color: #fff;
+            padding: 20px;
+            width: 100%;
+    
+        }
+
+        .navbar a {
+            padding: 10px;
+            line-height: 30px;
+            font-size: 15px;
+            color:  black;
+        }
+
+        .img-responsive {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .main-tintuc {
+            display: flex;
+            max-width: 90%;
+            margin: 0 auto;
+            /* Đặt margin auto để căn giữa theo chiều ngang */
+            background-color: #f0f0f0;
+            padding: 20px;
+            /* Thêm padding để cách lề trái và phải */
+            justify-content: space-between;
+        }
+
+        .main-tintuc .row {
+            background-color: #fff;
+            width: 70%;
+        }
+
+        .main-tintuc .row .banner img {
+            width: 100%;
+        }
+        .main-tintuc .content {
+            background-color: #fff;
+         }
+        .main-tintuc .content {
+            margin-top: 20px;
+            max-width: 100%;
+        }
+
+        .main-tintuc .content p {
+            font-size: 20px;
+            margin: 20px;
+        }
+
+        .main-tintuc .list_content {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            max-width: 100%;
+            
+            padding: 10px 20px;
+
+        }
+
+        .main-tintuc .list_content img {
+            width: 100%;
+        }
+
+        .main-tintuc .box_content {
+            
+            margin-top: 30px;
+            max-width: 100%;
+            padding: 10px 20px;
+            background-color:  #fff;
+        }
+
+        .main-tintuc .listbox_content {
+            display: flex;
+
+        }
+
+        .main-tintuc .listbox_content img {
+            max-width: 100%;
+            max-height: 100px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+
+        .main-tintuc .row2 {
+            width: 30%;
+            padding-left: 7px;
+
+           
+        }
+
+        .main-tintuc .row2 .title {
+            margin-bottom: 20px;
+           
+        }
+        
+        .main-tintuc .box_sukien{
+            padding: 10px 20px;
+            margin-bottom: 7px;
+            background-color:  #fff;
+            color: black;
+        }
+         
+        .main-tintuc .list_sukien {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            place-items: center;
+            width: 100%;
+        }
+        .main-tintuc .list_sukien img{
+            max-width: 80%;
+            height: auto;
+        }
+
+        .main-tintuc .tintuc {
+            max-width: 35%;
+            padding: 10px;
+            color: black;
+        
+            max-width: 100%;
+            background-color:  #fff;
+        }
+
+        .main-tintuc .tintuc .title {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .main-tintuc .tintuc .list_tintuc {
+            display: flex;
+            padding-bottom: 20px;
+        }
+
+        .main-tintuc .tintuc .list_tintuc img {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/reponsive.css">
+</head>
+
+<body>
+    <div id="backgr-login" style="display: none;" class="backgr-form">
+        <form action="" method="">
+            <h2>LOGIN</h2>
+            <input type="text" placeholder="Enter email">
+            <input type="text" placeholder="Enter password">
+            <p><a href="">Forgot password?</a></p>
+            <input class="smform" type="submit" value="LOGIN">
+            <p>Don't have an accout?<a href="">Sigup</a></p>
+        </form>
+
+    </div>
+    <div id="backgr-sigup" style="display: none;" class="backgr-form">
+        <form action="" method="">
+            <h2>SIGUP</h2>
+            <input type="text" placeholder="Enter email">
+            <input type="password" placeholder="Enter password">
+            <input type="password" placeholder="Confirm password">
+            <input class="smform" type="submit" value="Sigup">
+            <p>Already have an accout?<a href="">Login</a></p>
+        </form>
+
+    </div>
+    <!-- header -->
+    <header>
+        <div class="logo">logo</div>
+        <form action="" method="" class="search">
+            <input type="text" placeholder="Bạn cần tìm gì?">
+            <button><i class='bx bx-search'></i></button>
+        </form>
+        <nav class="nav-header">
+            <ul>
+                <li class="nav-hotline">
+                    <i class='bx bx-phone-call'></i>
+                    <a href="">Hotline: 0354179060</a>
+                </li>
+                <li class="info-cart">
+                    <i class='bx bx-notepad'></i>
+                    <a href="">Tra cứu đơn hàng</a>
+                </li>
+                <li class="cart">
+                    <i class='bx bx-cart-alt'></i>
+                    <a href="">Giỏ hàng</a>
+                </li>
+            </ul>
+        </nav>
+        <a href="#" class="cart-phone">
+            <i class='bx bx-cart-alt'></i>
+        </a>
+        <div class="form-login">
+            <i class='bx bxs-user'></i>
+            <div class="btn-login">Đăng nhập</div>
+            <div class="btn-sigup">Đăng ký</div>
+        </div>
+    </header>
+    <!-- end header -->
+
+    <!-- navigation -->
+    <nav class="nav-main">
+        <div class="menu-phone" valueStyle="flex">
+            <i style="font-size: 40px;" class='bx bx-menu'></i>
+        </div>
+        <ul class="nav-m-list">
+            <div class="close-menu" valueStyle="none">
+                <i class='bx bx-x'></i>
+            </div>
+            <li><i class='bx bxs-user'></i><a href="">Trang chủ</a></li>
+            <li class="father-li-sp">
+                <i class='bx bxs-box'></i>
+                <a href="">Sản phẩm</a>
+                <i class='bx bxs-down-arrow'></i>
+                <ul class="ch-li-sp">
+                    <li><a href="">Laptop</a></li>
+                    <li><a href="">PC</a></li>
+                    <li><a href="">Bàn phím</a></li>
+                    <li><a href="">Chuột</a></li>
+                </ul>
+            </li>
+            <li><i class='bx bx-news'></i><a href="">Tin tức công nghệ</a></li>
+            <li><i class='bx bxs-user-rectangle'></i><a href="">Giới thiệu</a></li>
+            <li><i class='bx bxs-phone-call'></i><a href="">Liên hệ</a></li>
+            <li><i class='bx bxs-videos'></i><a href="">Video</a></li>
+        </ul>
+    </nav>
+    <!-- end nav -->
+    <section class="navbar">
+        <a href="">Trang chủ /</a> <a>PC Gaming/</a> <a>PC GVN Gaming Intel i7-13700F/ VGA RTX 4070</a>
+    </section>
+    <section class="main-tintuc">
+        <section class="row">
+            <div class="banner">
+                <img src="img/image 1.png">
+            </div>
+            <div class="content">
+                <p>Razer giới thiệu bộ sưu tập gaming gear “Xì Trum” siêu dễ thương</p>
+                <div class="list_content">
+                    <div class="rol">
+                        <img src="img/image 3.png">
+                        <P>Snapdragon X Elite đánh bại CPU Intel, AMD, Apple trong loạt benchmark</P>
+                    </div>
+                    <div class="rol">
+                        <img src="img/image 3.png">
+                        <P>Snapdragon X Elite đánh bại CPU Intel, AMD, Apple trong loạt benchmark</P>
+                    </div>
+                    <div class="rol">
+                        <img src="img/image 3.png">
+                        <P>Snapdragon X Elite đánh bại CPU Intel, AMD, Apple trong loạt benchmark</P>
+                    </div>
+                </div>
+            </div>
+            <div class="box_content">
+                <div class="listbox_content">
+                    <img src="img/image 18.png">
+                    <p>Lộ diện Asus Dual GeForce RTX 4060 Ti tích hợp khe SSD, giá khá đắt</p>
+                    <P>Thứ Ba 31/10/2023</P>
+                </div>
+                <div class="listbox_content">
+                    <img src="img/image 18.png">
+                    <p>Lộ diện Asus Dual GeForce RTX 4060 Ti tích hợp khe SSD, giá khá đắt</p>
+                    <P>Thứ Ba 31/10/2023</P>
+                </div>
+                <div class="listbox_content">
+                    <img src="img/image 18.png">
+                    <p>Lộ diện Asus Dual GeForce RTX 4060 Ti tích hợp khe SSD, giá khá đắt</p>
+                    <P>Thứ Ba 31/10/2023</P>
+                </div>
+            </div>
+
+        </section>
+        <section class="row2">
+            <section class="box_sukien">
+                <div class="title">
+                    <h3>Chủ để hot</h3>
+                </div>
+                <div class="list_sukien">
+                    <div class="rol1">
+                        <img src="img/image 5.png">
+                        <P>lack friday</P>
+                    </div>
+                    <div class="rol1">
+                        <img src="img/image 5.png">
+                        <P>lack friday</P>
+                    </div>
+                    <div class="rol1">
+                        <img src="img/image 5.png">
+                        <P>lack friday</P>
+                    </div>
+                </div>
+                <div class="list_sukien">
+                    <div class="rol1">
+                        <img src="img/image 5.png">
+                        <P>lack friday</P>
+                    </div>
+                    <div class="rol1">
+                        <img src="img/image 5.png">
+                        <P>lack friday</P>
+                    </div>
+                    <div class="rol1">
+                        <img src="img/image 5.png">
+                        <P>lack friday</P>
+                    </div>
+                </div>
+            </section>
+            <section class="tintuc">
+                <div class="title">
+                    <h3>Tin tức</h3>
+                </div>
+                <div class="list_tintuc">
+                    <img src="img/anh1.png">
+                    <p>
+                        Mô tả tin tức sản phẩm
+                    </p>
+                </div>
+                <div class="list_tintuc">
+                    <img src="img/anh1.png">
+                    <p>
+                        Mô tả tin tức sản phẩm
+                    </p>
+                </div>
+                <div class="list_tintuc">
+                    <img src="img/anh1.png">
+                    <p>
+                        Mô tả tin tức sản phẩm
+                    </p>
+                </div>
+            </section>
+
+        </section>
+
+    </section>
+</body>
+
+</html>

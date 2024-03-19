@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #f0f0f0;
+            font-size: 17px;
+        }
+
+        header {
+            height: 100px;
+            display: flex;
+            background-color: #fff !important;
+            align-items: center;
+            position: relative;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .logo {
+            width: 200px;
+            font-size: 50px;
+            margin-right: 10px;
+        }
+
+        .search {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid rgb(158, 155, 155);
+            height: 50px;
+            width: 400px;
+            border-radius: 8px;
+            margin: 50px;
+        }
+
+        .search button {
+            background: none;
+            border: none;
+        }
+
+        .search input {
+            margin-left: 4px;
+            border: none;
+            height: 100%;
+            width: 100%;
+        }
+
+        .search i {
+            font-size: 20px;
+            margin: 10px;
+        }
+
+        .search input:focus {
+            outline: none;
+        }
+
+        .nav-header ul {
+            display: flex;
+            font-size: 17px;
+        }
+
+        .nav-header li {
+            display: flex;
+            align-items: center;
+            margin: 20px;
+            width: 120px;
+        }
+
+        .nav-header i {
+            margin: 5px;
+            font-size: 25px;
+
+        }
+
+        .form-login i {
+            font-size: 25px;
+            color: #fff;
+            margin: 10px;
+        }
+
+        .form-login {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            justify-content: center;
+            right: 20px;
+            width: 150px;
+            background-color: #821818;
+            height: 70%;
+            border-radius: 10px;
+        }
+
+        .form-login a {
+            color: #fff;
+            width: 50px;
+        }
+
+        /* nav main */
+        .nav-main {
+            height: 50px;
+            color: #fff;
+            background: #353333;
+        }
+
+        .nav-main i {
+            margin: 4px;
+        }
+
+        .nav-main ul {
+            margin-left: 20px;
+            display: flex;
+            list-style: none;
+
+        }
+
+        .nav-main li {
+            display: flex;
+            align-items: center;
+            margin-right: 40px;
+        }
+
+        .nav-main a {
+            line-height: 50px;
+            color: #fff;
+
+        }
+
+        .father-li-sp {
+            position: relative;
+        }
+
+        .ch-li-sp {
+            display: none !important;
+            left: 0;
+            top: 50px;
+            position: absolute;
+            background-color: #ffff;
+            flex-direction: column;
+            width: 300px;
+            padding: 10px;
+        }
+
+        .ch-li-sp a {
+            color: black;
+        }
+
+        .father-li-sp:hover .ch-li-sp {
+            display: flex !important;
+        }
+
+        .ch-li-sp li:hover {
+            background-color: #b5b3b3;
+            width: 100%;
+
+        }
+
+        .navbar {
+            background-color: white;
+            max-width: 100%;
+            height: 30px;
+            display: flex;
+        }
+
+        .navbar a {
+            margin-left: 45px;
+            line-height: 30px;
+            font-size: 15px;
+
+        }
+
+        .phanchinh {}
+
+        .bannernhos {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 0px 240px;
+            margin-top: 50px;
+        }
+
+
+
+        .bannernho1>img {
+            width: 100%;
+
+        }
+
+        .dmsp {
+
+            width: 1400px;
+            border: 1px solid black;
+            background-color: gray;
+            height: 600px;
+            margin-top: 50px;
+            margin-left: 60px;
+            border: none;
+        }
+
+        .dmsp1 {
+
+            
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+           
+
+        }
+
+        .dmsp2 {
+            margin-top: 30px;
+            border: 2px solid #ccc; /* Viền có màu xám nhạt */
+            width: 250px;
+            height: 500px;
+            transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Hiệu ứng chuyển động mượt hơn */
+            /* Hiệu ứng chuyển đổi */
+            background-color: white;
+        }
+
+        .dmsp2:hover {
+            transform: scale(1.1); /* Tăng giá trị scale khi hover */
+            box-shadow: 5px 5px 10px #888; /* Đổi giá trị box-shadow khi hover */
+
+        }
+
+        .dmsp3 {
+            margin-top: 30px;
+            transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Hiệu ứng chuyển động mượt hơn */
+            /* Hiệu ứng chuyển đổi */
+            border: 2px solid #ccc; /* Viền có màu xám nhạt */
+            width: 300px;
+            height: 400px;
+            background-color: white;
+        }
+
+        .dmsp3:hover {
+            transform: scale(1.1); /* Tăng giá trị scale khi hover */
+            box-shadow: 5px 5px 10px #888; /* Đổi giá trị box-shadow khi hover */
+            
+
+        }
+
+        .dmspright {
+            display: flex;
+            margin-left: 190px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+        }
+
+        .boxsp {
+            width: 100%;
+
+        }
+
+        .boxanh>img {
+            width: 100%;
+        }
+
+        .boxnd {
+            text-align: center;
+            margin-top: 20px;
+            background-color: white;
+        }
+
+        .indam {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .giacu {
+            font-size: 16px;
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .price {
+            font-size: 18px;
+            color: #F31515;
+            font-weight: 700;
+        }
+
+        .danhmuc {
+            margin-left: 38px;
+            width: 80%;
+            border: 1px solid black;
+            border: none;
+            display: grid;
+            grid-template-columns: 1fr;
+            margin-top: 30px;
+        }
+
+        .tendm1:hover {
+            cursor: pointer;
+            color: red;
+        }
+
+        .icon {
+            font-size: 18px;
+        }
+
+        .icon1 {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .phanchinh2 {
+            margin-top: 50px;
+            margin-left: 20px;
+            border: 2px solid #ccc; /* Viền có màu xám nhạt */
+            background-color: white;
+            width: 98%;
+            height: 530px;
+            
+        }
+
+        .tieudexem {
+            margin-top: 50px;
+            display: flex;
+        }
+
+        .tieudexem1 {
+            margin-top: 30px;
+            display: flex;
+        }
+
+        .black {
+            cursor: pointer;
+            font-size: 18px;
+            margin-left: 80px;
+        }
+
+        .blue {
+            cursor: pointer;
+            color: blue;
+            font-size: 18px;
+            margin-left: 1130px;
+
+        }
+
+        .posts {
+            margin-top: 20px;
+            display: flex;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 5px;
+        }
+
+        .post1 {
+            margin-left: 23px;
+            border: 1px solid black;
+            width: 340px;
+            border: none;
+        }
+
+        .postanh>img {
+            width: 100%;
+
+        }
+
+        footer {
+            margin-top: 50px;
+            border: 1px solid black;
+            height: 380px;
+            border: none;
+            background-color: white;
+        }
+
+        .footer1 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            margin-left: 60px;
+
+        }
+
+        .conttens {
+            margin-top: 30px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+      
+
+        .payment-methods {
+            margin-top: 20px;
+        }
+
+        .payment-methods ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .payment-methods ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .payment-methods ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .payment-methods ul li img {
+            width: 40px;
+        }
+
+        footer .footer-content {
+            display: flex;
+            margin-left: 60px;
+            margin-top: 50px;
+        }
+
+        .conttent4 {
+            display: flex;
+
+        }
+
+        .payment-methods1 {
+            margin-left: 50px;
+            margin-top: 16px;
+
+        }
+
+        .payment-methods1 ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .payment-methods1 ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .payment-methods1 ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .payment-methods1 ul li img {
+            width: 20px;
+        }
+
+        .payment-methods2 {
+            margin-left: 930px;
+        }
+
+        .payment-methods2 ul li {
+            display: inline-block;
+
+        }
+
+
+
+        .payment-methods2 ul li img {
+            width: 80px;
+        }
+
+        .bannernho {
+            width: 500px;
+            height: 240px;
+            perspective: 1000px;
+        }
+
+        .bannernho1 {
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+
+        .hover-image {
+            transform: rotateY(180deg);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .bannernho:hover .bannernho1 {
+            transform: rotateY(180deg);
+            cursor: pointer;
+        }
+
+        .hover-effect {
+            transition: transform 0.3s ease;
+            /* Thời gian hoàn thành hiệu ứng và kiểu chuyển động */
+        }
+
+        .hover-effect:hover {
+            transform: scale(1.1);
+            /* Kích thước hình ảnh tăng lên khi hover */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            /* Tạo bóng đổ */
+        }
+    </style>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header>
+        <div class="logo">logo</div>
+        <form action="" method="" class="search">
+            <input type="text" placeholder="Bạn cần tìm gì?">
+            <button><i class='bx bx-search'></i></button>
+        </form>
+        <nav class="nav-header">
+            <ul>
+                <li class="nav-hotline">
+                    <i class='bx bx-phone-call'></i>
+                    <a href="">Hotline: 0354179060</a>
+                </li>
+                <li class="info-cart">
+                    <i class='bx bx-notepad'></i>
+                    <a href="">Tra cứu đơn hàng</a>
+                </li>
+                <li class="cart">
+                    <i class='bx bx-cart-alt'></i>
+                    <a href="">Giỏ hàng</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="form-login">
+            <i class='bx bxs-user'></i>
+            <a href="">Đăng nhập</a>
+            <a href="">Đăng ký</a>
+        </div>
+    </header>
+    <nav class="nav-main">
+        <ul>
+            <li><i class='bx bxs-user'></i><a href="">Trang chủ</a></li>
+            <li class="father-li-sp">
+                <i class='bx bxs-box'></i>
+                <a href="">Sản phẩm</a>
+                <i class='bx bxs-down-arrow'></i>
+                <ul class="ch-li-sp">
+                    <li><a href="">Laptop</a></li>
+                    <li><a href="">PC</a></li>
+                    <li><a href="">Bàn phím</a></li>
+                    <li><a href="">Chuột</a></li>
+                </ul>
+            </li>
+            <li><i class='bx bx-news'></i><a href="">Tin tức công nghệ</a></li>
+            <li><i class='bx bxs-user-rectangle'></i><a href="">Giới thiệu</a></li>
+            <li><i class='bx bxs-phone-call'></i><a href="">Liên hệ</a></li>
+            <li><i class='bx bxs-videos'></i><a href="">Video</a></li>
+        </ul>
+    </nav>
+
+    <div class="navbar">
+        <div class="mauxanh">
+            <a href="#">Trang chủ /</a>
+        </div>
+        <div class="mauden">
+            <a href="#">Danh mục sản phẩm /</a>
+        </div>
+    </div>
+
+    <div class="phanchinh">
+        <div class="bannernhos">
+            <div class="bannernho">
+                <div class="bannernho1">
+                    <img src="img/bottom_1_3b098c5e4e8c45adb014ebdb99c70921.webp" alt="logo">
+                    <img src="img/bottom_3_04420bc1e2bc44b88c1f27b0b4fd43a1.webp" alt="Ảnh 2" class="hover-image">
+                </div>
+            </div>
+            <div class="bannernho">
+                <div class="bannernho1">
+                    <img src="img/gearvn-pc-gamin-homepage_ab95f26283bc4d0c997bfeb2070a158d.webp" alt="logo">
+                    <img src="img/bottom_2_2baece10adcb454083d29c10157c29a0.webp" alt="Ảnh 2" class="hover-image">
+                </div>
+            </div>
+        </div>
+        <div class="dmsp">
+            <div class="dmsp1">
+                <div class="dmsp2">
+                    <div class="danhmuc">
+                        <div class="icon">
+                            <i class='bx bx-laptop "'></i> <a class="tendm1" href="#">Laptop Gaming</a>
+                        </div>
+                        <div class="icon1">
+                            <i class='bx bx-laptop "'></i> <a class="tendm1" href="#">Laptop Văn Phòng</a>
+                        </div>
+                        <div class="icon1">
+                            <i class='bx bx-desktop'></i> <a class="tendm1" href="#">Pc - Gaming </a>
+                        </div>
+
+                        <div class="icon1">
+                            <i class='bx bx-desktop'></i> <a class="tendm1" href="#">Pc - Văn Phòng</a>
+                        </div>
+
+                        <div class="icon1">
+                            <i class='bx bx-laptop "'></i> <a class="tendm1" href="#">Màn hình</a>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="dmspright">
+
+
+                    <div class="dmsp3">
+                        <div class="boxsp">
+                            <div class="boxanh">
+                                <img src="img/gearvn-laptop-gaming-msi-katana-15-b13vek-1205vn-1_2076e1b703b747a2981fdc66c67d29b2_grande.webp"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="boxnd">
+                            <a href="#" class="indam">Laptop Gaming MSI </a> <br>
+
+                            <br>
+                            <p class="giacu"><s>28.990.000₫</s></p> <br>
+                            <a href="#" class="price">24.990.000₫ </a>
+                        </div>
+                    </div>
+                    <div class="dmsp3">
+                        <div class="boxsp">
+                            <div class="boxanh">
+                                <img src="img/gearvn-laptop-gaming-msi-katana-15-b13vek-1205vn-1_2076e1b703b747a2981fdc66c67d29b2_grande.webp"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="boxnd">
+                            <a href="#" class="indam">Laptop Gaming MSI </a> <br>
+
+                            <br>
+                            <p class="giacu"><s>28.990.000₫</s></p> <br>
+                            <a href="#" class="price">24.990.000₫ </a>
+                        </div>
+                    </div>
+                    <div class="dmsp3">
+                        <div class="boxsp">
+                            <div class="boxanh">
+                                <img src="img/gearvn-laptop-gaming-msi-katana-15-b13vek-1205vn-1_2076e1b703b747a2981fdc66c67d29b2_grande.webp"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="boxnd">
+                            <a href="#" class="indam">Laptop Gaming MSI </a> <br>
+
+                            <br>
+                            <p class="giacu"><s>28.990.000₫</s></p> <br>
+                            <a href="#" class="price">24.990.000₫ </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="phanchinh2">
+        <div class="tieudexem">
+            <a class="black" href="#">Trang tin tức</a>
+            <a class="blue" href="#">Xem tất cả</a>
+        </div>
+        <div class="posts">
+            <div class="post1">
+                <div class="postanh">
+                    <img width="340px" height="170px" src="img/bottom_1_3b098c5e4e8c45adb014ebdb99c70921.webp"
+                        alt="logo" class="hover-effect">
+                </div>
+            </div>
+            <div class="post1">
+                <div class="postanh">
+                    <img width="340px" height="170px" src="img/bottom_2_2baece10adcb454083d29c10157c29a0.webp"
+                        alt="logo" class="hover-effect">
+                </div>
+            </div>
+            <div class="post1">
+                <div class="postanh">
+                    <img width="340px" height="170px" src="img/bottom_3_04420bc1e2bc44b88c1f27b0b4fd43a1.webp" alt="" class="hover-effect">
+                </div>
+            </div>
+            <div class="post1">
+                <div class="postanh">
+                    <img width="340px" height="170px"
+                        src="img/gearvn-pc-gamin-homepage_ab95f26283bc4d0c997bfeb2070a158d.webp" alt="" class="hover-effect">
+                </div>
+            </div>
+        </div>
+
+        <div class="tieudexem1">
+            <a class="black" href="#">Trang khuyến mãi</a>
+            <a class="blue" href="#">Xem tất cả</a>
+        </div>
+        <div class="posts">
+            <div class="post1">
+                <div class="postanh">
+                    <iframe class="hover-effect" width="340" height="170" src="https://www.youtube.com/embed/BL9lTTDVbP8"
+                        title="Review Combo chuột phím tai nghe DareU học sinh sinh viên" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="post1">
+                <div class="postanh">
+                    <iframe class="hover-effect" width="340" height="170" src="https://www.youtube.com/embed/eTibQ1ieb-M"
+                        title="Màn hình gaming quốc dân kế nhiệm nay chỉ hơn 3 triệu - Review AOC 24G2SP"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="post1">
+                <div class="postanh">
+                    <iframe class="hover-effect" width="340" height="170" src="https://www.youtube.com/embed/aR-PK8qCqVQ"
+                        title="Top 3 Laptop văn phòng cho học sinh, sinh viên" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="post1">
+                <div class="postanh">
+                    <iframe class="hover-effect" width="340" height="170" src="https://www.youtube.com/embed/K4kKeYx7DS0"
+                        title="Hơn 500K có ngay bàn phím cơ gõ thích như phím Custom, chuyện thật hay đùa? - Review DareU EK75"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    </head>
+
+    <body>
+        <footer class="footer">
+
+            <div class="footer1">
+                <div class="conttens">
+                    <div class="contten1">
+                        <h5>VỀ GEARVN</h5>
+                        <a href="#">Giới thiệu</a> <br>
+                        <br>
+                        <a href="#">Tuyển dụng</a>
+                    </div>
+
+                </div>
+
+                <div class="conttens">
+                    <div class="contten1">
+                        <h5>CHÍNH SÁCH </h5>
+                        <a href="#">Chính sách bảo hành</a> <br>
+                        <br>
+                        <a href="#">Chính sách thanh toán</a> <br>
+                        <br>
+                        <a href="#">Chính sách giao hàng</a> <br>
+                        <br>
+                        <a href="#">Chính sách bảo mật</a> <br>
+
+                    </div>
+
+                </div>
+
+                <div class="conttens">
+                    <div class="contten1">
+                        <h5>THÔNG TIN</h5>
+                        <a href="#">Hệ thống cửa hàng</a> <br>
+                        <br>
+                        <a href="#">Trung tâm bảo hành</a>
+                    </div>
+
+                </div>
+
+                <div class="conttens">
+                    <div class="contten1">
+                        <h5>TỔNG ĐÀI HỖ TRỢ</h5>
+                        <a href="#">Gọi mua: 0123456789 (8:00-21:00)</a> <br>
+                        <br>
+                        <a href="#">CSKH: 0987654321 (8:00-21:00)</a> <br>
+                        <br>
+                        <a href="#">Email: shoplaptop@gmail.com</a>
+                    </div>
+
+                </div>
+
+                <div class="conttens">
+                    <div class="contten1">
+                        <h5>ĐƠN VỊ VẬN CHUYỂN</h5>
+                        <div class="payment-methods">
+                            <ul>
+                                <li><a href="#"><img src="img/ship_1.webp" alt="ZaloPay"></a></li>
+                                <li><a href="#"><img src="img/ship_2.webp" alt="MoMo"></a></li>
+                                <li><a href="#"><img src="img/ship_3.webp" alt="Visa"></a></li>
+                                <li><a href="#"><img src="img/ship_4.webp" alt="MasterCard"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="contten1">
+                        <h5>CÁC PHƯƠNG THỨC THANH TOÁN</h5>
+                        <div class="payment-methods">
+                            <ul>
+                                <li><a href="#"><img src="img/pay_1.webp" alt="ZaloPay"></a></li>
+                                <li><a href="#"><img src="img/pay_2.webp" alt="MoMo"></a></li>
+                                <li><a href="#"><img src="img/pay_3.webp" alt="Visa"></a></li>
+                                <li><a href="#"><img src="img/pay_4.webp" alt="MasterCard"></a></li> <br>
+                                <br>
+                                <li><a href="#"><img src="img/pay_5.webp" alt="ZaloPay"></a></li>
+                                <li><a href="#"><img src="img/pay_6.webp" alt="MoMo"></a></li>
+                                <li><a href="#"><img src="img/pay_7.webp" alt="Visa"></a></li>
+                                <li><a href="#"><img src="img/pay_8.webp" alt="MasterCard"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer-content">
+
+                <p>Kết nối với chúng tôi</p>
+                <div class="payment-methods1">
+                    <ul>
+                        <li><a href="#"><img src="img/facebook_1_0e31d70174824ea184c759534430deec.webp"
+                                    alt="ZaloPay"></a>
+                        </li>
+                        <li><a href="#"><img src="img/tiktok-logo_fe1e020f470a4d679064cec31bc676e4.webp" alt="MoMo"></a>
+                        </li>
+                        <li><a href="#"><img src="img/youtube_1_d8de1f41ca614424aca55aa0c2791684.webp" alt="Visa"></a>
+                        </li>
+                        <li><a href="#"><img src="img/group_1_54d23abd89b74ead806840aa9458661d.webp"
+                                    alt="MasterCard"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="payment-methods2">
+                    <ul>
+                        <li><a href="#"><img src="img/logo-bct.webp" alt="ZaloPay"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </body>
+
+</html>
